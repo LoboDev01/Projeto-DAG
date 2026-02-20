@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Cabin", sans-serif;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+img {
+    width: 10rem;
+}
+
+main {
+    padding: 30px 50px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 20%;
+    
+}
+
+.lineInput {
+    border-bottom: 5px;
+    display: grid;
+}
+
+
+input {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid;
+    outline: 0;
+}
+
+input[type=time] {
+    width: 70px;
+    padding: 5px;
+}
+
+select {
+    padding: 5px;
+}
+
+button {
+    border: 0px;
+    padding: 8px;
+    outline: 0;
+    background-color:#00FF00;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 15px;
+
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+table th {
+    background-color: #00FF00;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+table td {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+
+

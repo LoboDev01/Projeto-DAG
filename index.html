@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Separação</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/LOGO_DAG_DISTRIBUIDOR.png" alt="logo">
+        <h1>Controle de Separação</h1>
+    </header>
+
+    <main>
+        <div class="novoPedido">
+            <h2>Novo Pedido</h2>
+        </div>
+        
+        <div class="card">
+            <div class="lineInput">
+                <label>N° PEDIDO:</label>
+                <input type="text" id="numeroPedido" placeholder="digite aqui...">
+            </div>
+
+            <div class="lineInput">
+                <label>Hora Pedido:</label>
+                <input type="time" id="horaPedido">
+            </div>
+
+            <div class="lineInput">
+                <label>Cliente:</label>
+                <input type="text" id="cliente" placeholder="digite aqui...">
+            </div>
+
+            <div class="lineInput">
+                <label>Vendedor:</label>
+                <select name="vendedor" id="vendedor">
+                    <option value="vendedor">Wesley</option>
+                    <option value="vendedor">Vitor</option>
+                </select>
+                </div>
+
+            <div class="lineInput">
+                <label>Status:</label>
+                <select name="status" id="status">
+                    <option value="status">Normal</option>
+                    <option value="status">Cliente em loja</option>
+                </select>
+            </div><br>
+
+            <div>
+                <button onclick="pedido.salvar()">Salvar</button>
+                <button onclick="pedido.cancelar()">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <table border="">
+                <thead>
+                    <th>N° PEDIDO</th>
+                    <th>HORA DO PEDIDO</th>
+                    <th>CLIENTE</th>
+                    <th>VENDEDOR</th>
+                    <th>STATUS</th>
+                    <th>SEPARANDO</th>
+                    <th>FINALIZADO</th>
+                    <th>TEMPO FINAL</th>
+                    <th>AÇÕES</th>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </main>
+
+    
+</body>
+</html>
