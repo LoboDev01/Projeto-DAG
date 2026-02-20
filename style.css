@@ -89,5 +89,11 @@ table td {
     padding: 0.5rem;
 }
 
+table td img {
+    width: 20px;
+    text-align: center;
+    padding: 1px 5px;
+}
+
 
 

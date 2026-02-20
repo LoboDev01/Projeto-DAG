@@ -36,28 +36,28 @@
 
             <div class="lineInput">
                 <label>Vendedor:</label>
-                <select name="vendedor" id="vendedor">
-                    <option value="vendedor">Wesley</option>
-                    <option value="vendedor">Vitor</option>
+                <select id="vendedor">
+                    <option value="Wesley">Wesley</option>
+                    <option value="Vitor">Vitor</option>
                 </select>
                 </div>
 
             <div class="lineInput">
                 <label>Status:</label>
-                <select name="status" id="status">
-                    <option value="status">Normal</option>
-                    <option value="status">Cliente em loja</option>
+                <select id="status">
+                    <option value="Normal">Normal</option>
+                    <option value="Cliente em Loja">Cliente em loja</option>
                 </select>
             </div><br>
 
             <div>
-                <button onclick="pedido.salvar()">Salvar</button>
+                <button onclick="pedido.salvar()" id="btn1">Salvar</button>
                 <button onclick="pedido.cancelar()">Cancelar</button>
             </div>
         </div>
 
         <div class="content">
-            <table border="">
+            <table border="1">
                 <thead>
                     <th>N° PEDIDO</th>
                     <th>HORA DO PEDIDO</th>
