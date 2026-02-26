@@ -1,6 +1,6 @@
 class Pedido {
     constructor() {
-        this.id = 1;
+        
         this.arrayPedidos = [];
         this.editId = null;
     }
@@ -8,21 +8,22 @@ class Pedido {
     salvar() {
        let pedido = this.lerDados();
        
-       if(this.validaCampos(pedido)); {
+       if(this.validaCampos(pedido)) {
             if(this.editId == null) {
                 this.adicionar(pedido);
             } else {
                 this.atualizar(this.editId, pedido);
             }
-              
+              this.listaTabela();
+                this.cancelar();
        }
 
-       this.listaTabela();
-       this.cancelar();
+       
 
     }
 
     listaTabela() {
+        console.log("teste")
         let tbody = document.getElementById('tbody');
         tbody.innerText = '';
         
@@ -34,6 +35,9 @@ class Pedido {
             let td_cliente = tr.insertCell();
             let td_vendedor = tr.insertCell();
             let td_status = tr.insertCell();
+            let td_separando = tr.insertCell();
+            let td_finalizado = tr.insertCell();
+            let td_tempoFinal = tr.insertCell();
             let td_acoes = tr.insertCell();
 
             td_numeroPedido.innerText = this.arrayPedidos[i].numeroPedido;
@@ -41,6 +45,9 @@ class Pedido {
             td_cliente.innerText = this.arrayPedidos[i].cliente;
             td_vendedor.innerText = this.arrayPedidos[i].vendedor;
             td_status.innerText = this.arrayPedidos[i].status;
+            td_separando.innerText = this.arrayPedidos[i].separando ?? "";
+            td_finalizado.innerText = this.arrayPedidos[i].finalizado ?? "";
+            td_tempoFinal.innerText = this.arrayPedidos[i].tempotd_tempoFinal ?? "";
 
             let imgEdit = document.createElement('img');
             imgEdit.src = "assets/editar.svg"
@@ -91,7 +98,7 @@ class Pedido {
     lerDados() {
         let pedido = {}
 
-        pedido.id = this.id;
+        pedido.id = document.getElementById("numeroPedido").value;;
         pedido.numeroPedido = document.getElementById("numeroPedido").value;
         pedido.horaPedido = document.getElementById("horaPedido").value;
         pedido.cliente = document.getElementById("cliente").value;
@@ -104,27 +111,27 @@ class Pedido {
     validaCampos(pedido) {
         let msg = '';
 
-        if(pedido.numeroPedido == '') {
+        if(pedido.numeroPedido === '') {
             msg += '- informe o numero do pedido \n';
         }
 
-        if(pedido.horaPedido == '') {
+        if(pedido.horaPedido === '') {
             msg += '-informe a hora do pedido \n';
         }
 
-        if(pedido.cliente == '') {
+        if(pedido.cliente === '') {
             msg += '- informe o cliente \n';
         }
 
-        if(pedido.vendedor == '') {
+        if(pedido.vendedor === '') {
             msg += '- selecione o vendedor \n';
         }
 
-        if(pedido.status == '') {
+        if(pedido.status === '') {
             msg += '- selecione o status do pedido \n';
         }
 
-        if(msg != '') {
+        if(msg !== '') {
             alert(msg);
             return false
         }
