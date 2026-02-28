@@ -105,3 +105,19 @@ table td img {
     }
 }
 
+.separando {
+    padding: 10rem;
+}
+
+footer {
+    text-align: center;
+    background-color: #ccc;
+    width: 300px;
+    border-radius: 5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+     width: 100%; 
+}
+   
+

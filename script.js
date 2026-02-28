@@ -36,6 +36,7 @@ class Pedido {
             let td_vendedor = tr.insertCell();
             let td_status = tr.insertCell();
             let td_separando = tr.insertCell();
+             
             let td_finalizado = tr.insertCell();
             let td_tempoFinal = tr.insertCell();
             let td_acoes = tr.insertCell();
@@ -49,6 +50,17 @@ class Pedido {
             td_finalizado.innerText = this.arrayPedidos[i].finalizado ?? "";
             td_tempoFinal.innerText = this.arrayPedidos[i].tempotd_tempoFinal ?? "";
 
+           let separando = document.createElement('input');
+                separando.type = "checkbox";
+                separando.id = "meuCheckbox";
+                separando.value = "valor1"
+            
+            let finalizado = document.createElement("input");
+                finalizado.type = "checkbox";
+                finalizado.id = "finalizadoCheckbox";
+                finalizado.value = "1";
+
+            
             let imgEdit = document.createElement('img');
             imgEdit.src = "assets/editar.svg"
             imgEdit.setAttribute("onclick", "pedido.preparaEdicao("+ JSON.stringify(this.arrayPedidos[i]) +")")
@@ -58,8 +70,12 @@ class Pedido {
             imgDelete.src = "assets/excluir.png";
             imgDelete.setAttribute("onclick", "pedido.deletar("+ this.arrayPedidos[i].numeroPedido +")")
 
+            
+            td_separando.appendChild(separando);
+            td_finalizado.appendChild(finalizado);
             td_acoes.appendChild(imgEdit);
             td_acoes.appendChild(imgDelete);
+            
             
         }
     }
