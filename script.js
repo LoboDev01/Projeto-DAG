@@ -60,7 +60,12 @@ class Pedido {
                 finalizado.id = "finalizadoCheckbox";
                 finalizado.value = "1";
 
-            
+            let tempoFinal = document.createElement("input");
+                const agora = new Date();
+                const hora = agora.toLocaleTimeString();
+                tempoFinal.value = hora;
+
+
             let imgEdit = document.createElement('img');
             imgEdit.src = "assets/editar.svg"
             imgEdit.setAttribute("onclick", "pedido.preparaEdicao("+ JSON.stringify(this.arrayPedidos[i]) +")")
@@ -73,6 +78,7 @@ class Pedido {
             
             td_separando.appendChild(separando);
             td_finalizado.appendChild(finalizado);
+            td_tempoFinal.appendChild(tempoFinal);
             td_acoes.appendChild(imgEdit);
             td_acoes.appendChild(imgDelete);
             
